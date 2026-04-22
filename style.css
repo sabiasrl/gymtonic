@@ -46,7 +46,16 @@ img {
   text-decoration: none;
 }
 
-.brand img {
+.brand-home {
+  display: inline-flex;
+  text-decoration: none;
+}
+
+.brand span {
+  color: #ffffff;
+}
+
+.brand-home img {
   width: 48px;
   height: 48px;
   border-radius: 50%;
@@ -102,7 +111,7 @@ img {
 }
 
 .mobile-menu a {
-  color: #d6b319;
+  color: #ffffff;
   text-decoration: none;
   font-size: 1.2rem;
   font-weight: 700;
@@ -507,6 +516,14 @@ h1 {
   flex-wrap: wrap;
 }
 
+.footer-content a,
+.footer-content a[x-apple-data-detectors],
+.footer-content span[x-apple-data-detectors] {
+  color: inherit !important;
+  text-decoration: none !important;
+  font: inherit !important;
+}
+
 .whatsapp-float {
   position: fixed;
   right: 16px;
@@ -532,6 +549,25 @@ h1 {
 }
 
 @media (max-width: 700px) {
+  .brand,
+  .brand span,
+  .brand-home,
+  .brand-home:visited,
+  .brand-home:hover,
+  .brand-home:active {
+    color: #ffffff !important;
+    text-decoration: none !important;
+  }
+
+  .footer-content,
+  .footer-content a,
+  .footer-content a[x-apple-data-detectors],
+  .footer-content span[x-apple-data-detectors] {
+    color: #9f9f9f !important;
+    text-decoration: none !important;
+    font: inherit !important;
+  }
+
   .nav {
     position: fixed;
     top: 0;
