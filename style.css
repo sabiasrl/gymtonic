@@ -193,6 +193,12 @@ h1 {
   line-height: 1.1;
 }
 
+.hero-main-logo {
+  width: clamp(180px, 34vw, 360px);
+  height: auto;
+  margin: 0 0 0.9rem;
+}
+
 .hero-text {
   font-size: 1.05rem;
   color: #f2f2f2;
