@@ -188,7 +188,7 @@ img {
 .eyebrow {
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: #d6b319;
+  color: #e0c013;
   font-weight: 700;
   margin: 0 0 0.5rem;
 }
@@ -200,7 +200,7 @@ h3 {
 }
 
 h2 {
-  color: #d6b319;
+  color: #e0c013;
 }
 
 h1 {
@@ -411,12 +411,12 @@ h1 {
 }
 
 .testimonial span {
-  color: #d6b319;
+  color: #e0c013;
   font-weight: 700;
 }
 
 .reviews-link {
-  color: #d6b319;
+  color: #e0c013;
   font-weight: 700;
 }
 
@@ -484,7 +484,7 @@ h1 {
   width: 42px;
   height: 42px;
   border: 0;
-  color: #d6b319;
+  color: #e0c013;
   text-decoration: none;
   background: transparent;
 }
@@ -529,14 +529,14 @@ h1 {
   right: 16px;
   bottom: 16px;
   z-index: 999;
-  background: #d6b319;
+  background: #e0c013;
   color: #111111;
   text-decoration: none;
   font-weight: 800;
   padding: 0.85rem 1.1rem;
   border-radius: 999px;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
-  border: 1px solid #d6b319;
+  border: 1px solid #e0c013;
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
@@ -546,6 +546,20 @@ h1 {
   width: 22px;
   height: 22px;
   fill: currentColor;
+}
+
+/* Explicit accent lock for requested elements */
+.eyebrow,
+#testimonianze h2,
+#contatti h2,
+.testimonial span,
+.contact-whatsapp {
+  color: #e0c013;
+}
+
+.whatsapp-float {
+  background: #e0c013;
+  border-color: #e0c013;
 }
 
 @media (max-width: 700px) {
