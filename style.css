@@ -42,6 +42,8 @@ img {
   gap: 0.7rem;
   font-weight: 800;
   letter-spacing: 0.02em;
+  color: #ffffff;
+  text-decoration: none;
 }
 
 .brand img {
@@ -110,6 +112,10 @@ img {
   width: min(220px, 62vw);
   height: auto;
   margin-bottom: 0.4rem;
+}
+
+.mobile-menu-logo-link {
+  display: inline-flex;
 }
 
 .mobile-menu[hidden] {
@@ -526,6 +532,19 @@ h1 {
 }
 
 @media (max-width: 700px) {
+  .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    margin: 0;
+    z-index: 1100;
+    padding: 0.6rem 1rem;
+    background: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(4px);
+  }
+
   .nav-links {
     display: none;
   }
@@ -536,6 +555,10 @@ h1 {
 
   .btn-nav {
     display: none;
+  }
+
+  .hero-content {
+    padding-top: 6.2rem;
   }
 
   .gallery-item--2,
