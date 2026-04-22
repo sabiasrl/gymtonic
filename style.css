@@ -21,10 +21,12 @@ img {
 }
 
 .hero {
-  min-height: 85vh;
+  min-height: 100vh;
+  min-height: 100svh;
   background: linear-gradient(120deg, rgba(0, 0, 0, 0.82), rgba(214, 179, 25, 0.22)), url("assets/public-domain/bg-hero.jpg") center/cover no-repeat;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .nav {
@@ -68,11 +70,21 @@ img {
 
 .menu-toggle {
   display: none;
-  border: 1px solid #d6b319;
-  background: rgba(0, 0, 0, 0.45);
+  border: 0;
+  background: rgba(0, 0, 0, 0.6);
   color: #ffffff;
-  padding: 0.55rem 0.8rem;
+  width: 42px;
+  height: 42px;
+  padding: 0;
   font: inherit;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-toggle svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
 }
 
 .mobile-menu {
@@ -94,6 +106,12 @@ img {
   font-weight: 700;
 }
 
+.mobile-menu-logo {
+  width: min(220px, 62vw);
+  height: auto;
+  margin-bottom: 0.4rem;
+}
+
 .mobile-menu[hidden] {
   display: none;
 }
@@ -102,21 +120,54 @@ img {
   position: absolute;
   top: 1rem;
   right: 1rem;
-  border: 1px solid #d6b319;
-  background: transparent;
+  border: 0;
+  background: rgba(0, 0, 0, 0.6);
   color: #ffffff;
-  padding: 0.5rem 0.8rem;
+  width: 42px;
+  height: 42px;
+  padding: 0;
   font: inherit;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-close svg {
+  width: 22px;
+  height: 22px;
+  fill: currentColor;
 }
 
 .hero-content {
   margin: auto;
-  padding: 3rem 0 4.5rem;
+  padding: 3rem 0 6rem;
   max-width: 760px;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.scroll-down {
+  position: absolute;
+  left: 50%;
+  bottom: 1.4rem;
+  transform: translateX(-50%);
+  width: 44px;
+  height: 44px;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.45);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.scroll-down svg {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
 }
 
 .eyebrow {
@@ -164,20 +215,20 @@ h1 {
 
 .btn-nav {
   background: rgba(0, 0, 0, 0.45);
-  border: 1px solid #d6b319;
+  border: 1px solid #ffffff;
   color: #ffffff;
 }
 
 .btn-primary {
-  background: #d6b319;
+  background: #ffffff;
   color: #111111;
-  border: 1px solid #d6b319;
+  border: 1px solid #ffffff;
 }
 
 .btn-secondary {
   background: rgba(0, 0, 0, 0.45);
   color: #ffffff;
-  border: 1px solid #d6b319;
+  border: 1px solid #ffffff;
 }
 
 .section {
@@ -216,14 +267,26 @@ h1 {
 
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
   gap: 0.35rem;
+  grid-auto-flow: dense;
+  align-items: stretch;
 }
 
 .gallery-item {
   margin: 0;
   border-radius: 0;
   overflow: hidden;
+  aspect-ratio: 1 / 1;
+}
+
+.gallery-item--2 {
+  grid-column: span 1;
+  aspect-ratio: 1 / 1;
+}
+
+.gallery-item--4 {
+  grid-column: span 1;
   aspect-ratio: 1 / 1;
 }
 
@@ -238,11 +301,46 @@ h1 {
   opacity: 0.85;
 }
 
-.instagram-link {
-  display: inline-block;
-  margin-top: 1rem;
-  color: #d6b319;
+.gallery-instagram-card {
+  aspect-ratio: 1 / 1;
+  background: rgba(0, 0, 0, 0.72);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.instagram-box-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.55rem 0.9rem;
+  background: #ffffff;
+  color: #111111;
+  text-decoration: none;
   font-weight: 700;
+}
+
+.instagram-box-button svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+@media (min-width: 1200px) {
+  .gallery-item--2 {
+    grid-column: span 2;
+    aspect-ratio: 2 / 1;
+  }
+
+  .gallery-item--4 {
+    grid-column: span 2;
+    grid-row: span 2;
+    aspect-ratio: auto;
+  }
+
+  .gallery-item--4 img {
+    height: 100%;
+  }
 }
 
 .section-dark {
@@ -403,10 +501,20 @@ h1 {
   }
 
   .menu-toggle {
-    display: inline-block;
+    display: inline-flex;
   }
 
   .btn-nav {
+    display: none;
+  }
+
+  .gallery-item--2,
+  .gallery-item--4 {
+    grid-column: span 1;
+    aspect-ratio: 1 / 1;
+  }
+
+  .scroll-down {
     display: none;
   }
 }
