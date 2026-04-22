@@ -231,6 +231,23 @@ h1 {
   border: 1px solid #ffffff;
 }
 
+.btn-instagram-icon {
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+  border: 0;
+}
+
+.btn-instagram-icon svg {
+  width: 22px;
+  height: 22px;
+  fill: #ffffff;
+}
+
 .section {
   padding: 4rem 0;
 }
@@ -303,7 +320,7 @@ h1 {
 
 .gallery-instagram-card {
   aspect-ratio: 1 / 1;
-  background: rgba(0, 0, 0, 0.72);
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -312,17 +329,20 @@ h1 {
 .instagram-box-button {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.45rem;
-  padding: 0.55rem 0.9rem;
-  background: #ffffff;
-  color: #111111;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  background: transparent;
+  color: #ffffff;
   text-decoration: none;
   font-weight: 700;
 }
 
 .instagram-box-button svg {
-  width: 18px;
-  height: 18px;
+  width: 24px;
+  height: 24px;
   fill: currentColor;
 }
 
