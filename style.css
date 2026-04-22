@@ -264,6 +264,10 @@ h1 {
   background: linear-gradient(rgba(10, 10, 10, 0.88), rgba(10, 10, 10, 0.88)), url("assets/public-domain/bg-testimonial.jpg") center/cover no-repeat;
 }
 
+#testimonianze {
+  background: linear-gradient(rgba(10, 10, 10, 0.88), rgba(10, 10, 10, 0.88)), url("assets/public-domain/bg-testimonial.jpg") center/cover no-repeat;
+}
+
 .section-intro {
   margin-top: 0;
   color: #bdbdbd;
