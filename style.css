@@ -83,7 +83,7 @@ img {
 }
 
 .nav-actions {
-  display: flex;
+  display: none;
   align-items: center;
   gap: 0.6rem;
 }
@@ -286,6 +286,42 @@ h1 {
   width: 22px;
   height: 22px;
   fill: #ffffff;
+}
+
+.btn-facebook-icon {
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #1877f2;
+  border: 0;
+  color: #ffffff;
+}
+
+.btn-facebook-icon svg {
+  width: 22px;
+  height: 22px;
+  fill: currentColor;
+}
+
+.btn-whatsapp-icon {
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #25d366;
+  border: 0;
+  color: #ffffff;
+}
+
+.btn-whatsapp-icon svg {
+  width: 22px;
+  height: 22px;
+  fill: currentColor;
 }
 
 .section {
@@ -506,22 +542,45 @@ h1 {
   font-weight: 700;
 }
 
-.contact-whatsapp {
+.contact-socials {
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.contact-socials span {
+  color: #bdbdbd;
+}
+
+.contact-social-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 42px;
-  height: 42px;
-  border: 0;
-  color: #e0c013;
   text-decoration: none;
-  background: transparent;
+  color: #ffffff;
 }
 
-.contact-whatsapp svg {
-  width: 24px;
-  height: 24px;
+.contact-social-icon svg {
+  width: 20px;
+  height: 20px;
   fill: currentColor;
+}
+
+.contact-social-icon--instagram {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+}
+
+.contact-social-icon--facebook {
+  background: #1877f2;
+}
+
+.contact-social-icon--whatsapp {
+  background: #25d366;
 }
 
 .map-wrapper iframe {
@@ -581,8 +640,7 @@ h1 {
 .eyebrow,
 #testimonianze h2,
 #contatti h2,
-.testimonial span,
-.contact-whatsapp {
+.testimonial span {
   color: #e0c013;
 }
 
@@ -630,12 +688,12 @@ h1 {
     display: none;
   }
 
-  .menu-toggle {
-    display: inline-flex;
+  .nav-actions {
+    display: flex;
   }
 
-  .btn-nav {
-    display: none;
+  .menu-toggle {
+    display: inline-flex;
   }
 
   .hero-content {
