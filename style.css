@@ -628,6 +628,13 @@ h1 {
   flex-wrap: wrap;
 }
 
+.footer-powered {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
 .footer-content a,
 .footer-content a[x-apple-data-detectors],
 .footer-content span[x-apple-data-detectors] {
