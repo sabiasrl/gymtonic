@@ -324,6 +324,30 @@ h1 {
   fill: currentColor;
 }
 
+.btn-contact-icon {
+  width: 44px;
+  height: 44px;
+  aspect-ratio: 1 / 1;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 0;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: none;
+  clip-path: circle(50%);
+}
+
+.btn-contact-icon img {
+  width: 130%;
+  height: 130%;
+  display: block;
+  object-fit: cover;
+  border-radius: inherit;
+}
+
 .section {
   padding: 4rem 0;
 }
