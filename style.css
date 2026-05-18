@@ -341,8 +341,8 @@ h1 {
 }
 
 .btn-contact-icon img {
-  width: 130%;
-  height: 130%;
+  width: 60%;
+  height: 60%;
   display: block;
   object-fit: cover;
   border-radius: inherit;
@@ -564,6 +564,25 @@ h1 {
   color: #ffffff;
   text-decoration: none;
   font-weight: 700;
+}
+
+.contact-vcard {
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.contact-vcard:hover .contact-vcard-label,
+.contact-vcard:focus-visible .contact-vcard-label {
+  text-decoration: underline;
+}
+
+.contact-vcard-label {
+  font-weight: 500;
+  font-size: 0.8rem;
+  line-height: 1.2;
 }
 
 .contact-socials {
